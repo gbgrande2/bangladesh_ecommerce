@@ -1,0 +1,29 @@
+﻿
+# Converting csv files into a sqlite database
+
+sqlite3 ecommerce.db <<EOS
+.mode csv
+.import fact_table.csv orders
+.import time_dim.csv times
+.import customer_dim.csv customers
+.import store_dim.csv stores
+.import item_dim.csv items
+.import Trans_dim.csv transactions
+EOS
+
+# Transforming data types of columns within sqlite tables
+
+sqlite-utils transform ecommerce.db orders \
+	--type quantity integer \
+	--type unit_price float \
+	--type total_price float 
+
+sqlite-utils transform ecommerce.db times \
+	--type hour integer \
+	--type day integer \
+	--type month integer \
+	--type year integer
+
+sqlite-utils transform ecommerce.db items \
+	--type unit_price integer
+
