@@ -1,2 +1,3 @@
 # bangladesh_ecommerce
 Analysis of Bangladeshi ecommerce data. The goal of this analysis was to explore and investigate data from this Bangladeshi ecommerce business to see what steps could be taken to improve their productivity and revenue. For example, I looked at store productivity in different regions, popularity of products, and customer trends. The original dataset can be found here: https://www.kaggle.com/datasets/mmohaiminulislam/ecommerce-data-analysis/data.
+Additional websites were used to improve the analysis by including population count of districts and divisions in Bangladesh (https://www.citypopulation.de/en/bangladesh/cities/) and operator codes (https://en.wikipedia.org/wiki/Telephone_numbers_in_Bangladesh).
